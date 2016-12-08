@@ -1,9 +1,9 @@
-var InfiniteScroller = InfiniteScroller || {};
+var SideScroller = SideScroller || {};
 
-InfiniteScroller.game = new Phaser.Game(746, 420, Phaser.CANVAS, '');
+SideScroller.game = new Phaser.Game(746, 420, Phaser.AUTO, '');
 
-InfiniteScroller.game.state.add('Boot', InfiniteScroller.Boot);
-InfiniteScroller.game.state.add('Preload', InfiniteScroller.Preload);
-InfiniteScroller.game.state.add('Game', InfiniteScroller.Game);
+SideScroller.game.state.add('Boot', SideScroller.Boot);
+SideScroller.game.state.add('Preload', SideScroller.Preload);
+SideScroller.game.state.add('Game', SideScroller.Game);
 
-InfiniteScroller.game.state.start('Boot');
+SideScroller.game.state.start('Boot');

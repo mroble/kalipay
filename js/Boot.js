@@ -1,16 +1,16 @@
-var InfiniteScroller = InfiniteScroller || {};
+var SideScroller = SideScroller || {};
 
-InfiniteScroller.Boot = function(){};
+SideScroller.Boot = function(){};
 
 //setting game configuration and loading the assets for the loading screen
-InfiniteScroller.Boot.prototype = {
+SideScroller.Boot.prototype = {
   preload: function() {
     //assets we'll use in the loading screen
     this.load.image('preloadbar', 'assets/images/preloader-bar.png');
   },
   create: function() {
-    //the game will have a sky blue background
-    this.game.stage.backgroundColor = '#5555ff';
+    //loading screen will have a white background
+    this.game.stage.backgroundColor = '#fff';
 
     //scaling options
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
