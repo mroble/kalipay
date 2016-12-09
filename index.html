@@ -2,7 +2,7 @@
 <html lang="en"> 
 <head> 
 	<meta charset="UTF-8" />
-    <title>Phaser - Making your first game, part 9</title>
+    <title>Test!!!!</title>
 	<script type="text/javascript" src="js/phaser.min.js"></script>
     <style type="text/css">
         body {
@@ -20,7 +20,7 @@ function preload() {
 
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/platform.png');
-    game.load.image('star', 'assets/star.png');
+    game.load.image('coin', 'assets/gamaycoin.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
 
 }
@@ -29,7 +29,7 @@ var player;
 var platforms;
 var cursors;
 
-var stars;
+var coins;
 var score = 0;
 var scoreText;
 
@@ -78,23 +78,23 @@ function create() {
     player.animations.add('left', [0, 1, 2, 3], 10, true);
     player.animations.add('right', [5, 6, 7, 8], 10, true);
 
-    //  Finally some stars to collect
-    stars = game.add.group();
+    //  Finally some coins to collect
+    coins = game.add.group();
 
-    //  We will enable physics for any star that is created in this group
-    stars.enableBody = true;
+    //  We will enable physics for any coin that is created in this group
+    coins.enableBody = true;
 
     //  Here we'll create 12 of them evenly spaced apart
     for (var i = 0; i < 12; i++)
     {
-        //  Create a star inside of the 'stars' group
-        var star = stars.create(i * 70, 0, 'star');
+        //  Create a coin inside of the 'coins' group
+        var coin = coins.create(i * 70, 0, 'coin');
 
         //  Let gravity do its thing
-        star.body.gravity.y = 300;
+        coin.body.gravity.y = 300;
 
-        //  This just gives each star a slightly random bounce value
-        star.body.bounce.y = 0.7 + Math.random() * 0.2;
+        //  This just gives each coin a slightly random bounce value
+        coin.body.bounce.y = 0.7 + Math.random() * 0.2;
     }
 
     //  The score
@@ -107,12 +107,12 @@ function create() {
 
 function update() {
 
-    //  Collide the player and the stars with the platforms
+    //  Collide the player and the coins with the platforms
     game.physics.arcade.collide(player, platforms);
-    game.physics.arcade.collide(stars, platforms);
+    game.physics.arcade.collide(coins, platforms);
 
-    //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
-    game.physics.arcade.overlap(player, stars, collectStar, null, this);
+    //  Checks to see if the player overlaps with any of the coins, if he does call the collectStar function
+    game.physics.arcade.overlap(player, coins, collectStar, null, this);
 
     //  Reset the players velocity (movement)
     player.body.velocity.x = 0;
@@ -147,10 +147,10 @@ function update() {
 
 }
 
-function collectStar (player, star) {
+function collectStar (player, coin) {
     
-    // Removes the star from the screen
-    star.kill();
+    // Removes the coin from the screen
+    coin.kill();
 
     //  Add and update the score
     score += 10;
