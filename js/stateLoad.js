@@ -22,7 +22,7 @@ var StateLoad = {
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
         game.load.audio("coin", "sounds/Accept.mp3");
         game.load.audio("gameOver", "sounds/pixie-go.mp3");
-        game.load.audio("backgroundMusic", "sounds/happy.mp3");
+        game.load.audio("backgroundMusic", "sounds/song18.mp3");
         game.load.spritesheet("buttons", "images/ui/buttons.png", 265, 75);
 
     },
