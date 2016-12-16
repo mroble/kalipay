@@ -14,7 +14,7 @@ var StateOver = {
         this.dragon.animations.add('fly', [0, 1, 2, 3], 12, true);
         this.dragon.animations.play('fly');
         this.dragon.scale.x=-1;
-        game.stage.backgroundColor="#26C9FF";
+        game.stage.backgroundColor="#45B5AA";
         
     }
     , replay: function () {

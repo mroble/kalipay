@@ -26,10 +26,10 @@ var StateMain = {
         this.bottom = game.height - 120;
 
         //sounds
-        this.burp = game.add.audio("burp");
-        this.gulp = game.add.audio("gulp");
+        this.coin = game.add.audio("coin");
+        this.gameOver = game.add.audio("gameOver");
         this.backgroundMusic = game.add.audio("backgroundMusic");
-        this.backgroundMusic.volume = .5;
+        this.backgroundMusic.volume = .3;
         this.backgroundMusic.loop = true;
 
         //dragon
@@ -166,11 +166,11 @@ var StateMain = {
             score++;
             this.scoreText.text = score;
             if (soundOn == true) {
-                this.gulp.play();
+                this.coin.play();
             }
         } else {
             if (soundOn == true) {
-                this.burp.play();
+                this.gameOver.play();
             }
             candy.kill();
             this.backgroundMusic.stop();

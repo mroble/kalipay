@@ -20,9 +20,9 @@ var StateLoad = {
         game.load.spritesheet("candy", "images/main/candy.png", 52, 50, 8);
         game.load.image("balloon", "images/main/thought.png");
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
-        game.load.audio("burp", "sounds/burp.mp3");
-        game.load.audio("gulp", "sounds/gulp.mp3");
-        game.load.audio("backgroundMusic", "sounds/background.mp3");
+        game.load.audio("coin", "sounds/Accept.mp3");
+        game.load.audio("gameOver", "sounds/pixie-go.mp3");
+        game.load.audio("backgroundMusic", "sounds/happy.mp3");
         game.load.spritesheet("buttons", "images/ui/buttons.png", 265, 75);
 
     },
