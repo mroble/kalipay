@@ -164,6 +164,10 @@ var StateMain = {
             candy.kill();
             this.resetThink();
             score++;
+            if (score == 1) {
+                //this.backgroundMusic.stop();
+                game.state.start("StateVictory");
+            }
             this.scoreText.text = score;
             if (soundOn == true) {
                 this.coin.play();

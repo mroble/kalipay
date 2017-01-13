@@ -1,4 +1,4 @@
-var StateVictory = {
+var StateTitle = {
 
     preload: function () {
         
@@ -15,7 +15,7 @@ var StateVictory = {
         this.dragon.animations.play('fly');
         game.stage.backgroundColor = "#45B5AA";
 
-        this.titleText = game.add.text(game.world.centerX, 60, "Kalipay And The Tiniest Tiktik", {
+        this.titleText = game.add.text(game.world.centerX, 60, "Congratulations! You Did It!", {
             font: "50px Architects Daughter"
             , fill: "#ffcc00"
             , stroke: "#800000"
