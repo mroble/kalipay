@@ -17,7 +17,7 @@ var StateLoad = {
         //PRELOAD EVERYTHING HERE
         game.load.spritesheet("dragon", "images/main/dragon.png", 120, 85, 4);
         game.load.image("background", "images/main/background.png");
-        game.load.spritesheet("candy", "images/main/candy.png", 52, 50, 8);
+        game.load.spritesheet("candy", "images/main/candy.png", 50, 51, 4);
         game.load.image("balloon", "images/main/thought.png");
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
         game.load.audio("coin", "sounds/Accept.mp3");
