@@ -16,8 +16,9 @@ var StateLoad = {
 
         //PRELOAD EVERYTHING HERE
         game.load.spritesheet("dragon", "images/main/dragon.png", 120, 85, 4);
+        //game.load.spritesheet("titlePage", "images/ui/KalipayGameTitle.png", 400, 400, 1);
         game.load.image("background", "images/main/background.png");
-        game.load.spritesheet("candy", "images/main/candy.png", 50, 51, 4);
+        game.load.spritesheet("candy", "images/main/candy.png", 75, 75, 4);
         game.load.image("balloon", "images/main/thought.png");
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
         game.load.audio("coin", "sounds/Accept.mp3");
