@@ -5,7 +5,7 @@ var StateMain = {
         if (screen.width < 1500) {
             game.scale.forceOrientation(true, false);
         }
-        
+
     },
 
     create: function () {
@@ -16,8 +16,8 @@ var StateMain = {
         this.lift=350;
         this.fall=500;
         this.delay=1;
-        
-        
+
+
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
         game.stage.backgroundColor="#000000";
@@ -26,10 +26,10 @@ var StateMain = {
         this.bottom = game.height - 120;
 
         //sounds
-        this.coin = game.add.audio("coin");
-        this.gameOver = game.add.audio("gameOver");
+        this.burp = game.add.audio("burp");
+        this.gulp = game.add.audio("gulp");
         this.backgroundMusic = game.add.audio("backgroundMusic");
-        this.backgroundMusic.volume = .3;
+        this.backgroundMusic.volume = .5;
         this.backgroundMusic.loop = true;
 
         //dragon
@@ -164,17 +164,13 @@ var StateMain = {
             candy.kill();
             this.resetThink();
             score++;
-            if (score == 1) {
-                //this.backgroundMusic.stop();
-                game.state.start("StateVictory");
-            }
             this.scoreText.text = score;
             if (soundOn == true) {
-                this.coin.play();
+                this.gulp.play();
             }
         } else {
             if (soundOn == true) {
-                this.gameOver.play();
+                this.burp.play();
             }
             candy.kill();
             this.backgroundMusic.stop();

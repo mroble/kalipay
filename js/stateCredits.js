@@ -1,7 +1,7 @@
-var StateTitle = {
+var StateCredits = {
 
     preload: function () {
-        
+
     },
 
     create: function () {
@@ -16,6 +16,10 @@ var StateTitle = {
         game.stage.backgroundColor = "#45B5AA";
 
         this.titleText = game.add.text(game.world.centerX, 60, "Credits", {
+            //Music And Sounds Courtesy Of
+            //
+            //
+            //
             font: "50px Lobster"
             , fill: "#ffcc00"
             , stroke: "#800000"
@@ -23,7 +27,7 @@ var StateTitle = {
             , align: "center"
             this.titleText.anchor.set(0.5, 0.5);
         });
-     
+
     }
     , startGame: function () {
         game.state.start("StateInstructions");

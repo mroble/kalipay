@@ -15,15 +15,12 @@ var StateLoad = {
         game.load.setPreloadSprite(full);
 
         //PRELOAD EVERYTHING HERE
-        game.load.spritesheet("dragon", "images/main/dragon.png", 120, 85, 4);
-        //game.load.spritesheet("titlePage", "images/ui/KalipayGameTitle.png", 400, 400, 1);
+        game.load.spritesheet("dragon", "images/main/Gamay_Sprite.png", 120, 85, 4);
         game.load.image("background", "images/main/background.png");
-        game.load.spritesheet("candy", "images/main/candy.png", 75, 75, 4);
+        game.load.spritesheet("candy", "images/main/candy.png", 52, 50, 8);
         game.load.image("balloon", "images/main/thought.png");
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
-        game.load.audio("coin", "sounds/Accept.mp3");
-        game.load.audio("gameOver", "sounds/pixie-go.mp3");
-        game.load.audio("backgroundMusic", "sounds/song18.mp3");
+        game.load.audio("backgroundMusic", "sounds/background.mp3");
         game.load.spritesheet("buttons", "images/ui/buttons.png", 265, 75);
 
     },

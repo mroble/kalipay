@@ -1,7 +1,7 @@
-var StateTitle = {
+var StateVictory = {
 
     preload: function () {
-        
+
     },
 
     create: function () {
@@ -13,19 +13,32 @@ var StateTitle = {
         this.dragon.anchor.set(0.5, 0.5);
         this.dragon.animations.add('fly', [0, 1, 2, 3], 12, true);
         this.dragon.animations.play('fly');
-        game.stage.backgroundColor = "#45B5AA";
+        game.stage.backgroundColor = "#26C9FF";
 
-        this.titleText = game.add.text(game.world.centerX, 60, "Congratulations! You Did It!", {
-            font: "50px Architects Daughter"
-            , fill: "#ffcc00"
-            , stroke: "#800000"
+        this.titleText = game.add.text(game.world.centerX, 60, "Hungry Dragon", {
+            font: "50px Lobster"
+            , fill: "#00D900"
+            , stroke: "#222222"
             , strokeThickness: 4
             , align: "center"
         });
         this.titleText.anchor.set(0.5, 0.5);
     }
     , startGame: function () {
-        game.state.start("StateMain");
+        game.state.start("StateInstructions");
+    }
+    , update: function () {
+
+    }
+
+},
+       // this.titleText.anchor.set(0.5, 0.5);
+    //}
+
+
+
+    startGame: function () {
+        game.state.start("StateInstructions");
     }
     , update: function () {
 
