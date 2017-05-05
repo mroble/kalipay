@@ -17,6 +17,7 @@ var StateLoad = {
         //PRELOAD EVERYTHING HERE
         game.load.spritesheet("gamay", "images/main/Gamay_Sprite.png", 120, 85, 4);
         game.load.image("background", "images/main/background.png");
+        game.load.image("title", "images/main/title_pic.png");
         game.load.spritesheet("candy", "images/main/candy.png", 52, 50, 8);
         game.load.image("balloon", "images/main/thought.png");
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
