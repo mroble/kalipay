@@ -9,10 +9,10 @@ var StateCredits = {
         this.buttonStart.anchor.set(0.5, 0.5);
 
         //dragon
-        this.dragon = game.add.sprite(game.world.centerX, game.world.centerY, "dragon");
-        this.dragon.anchor.set(0.5, 0.5);
-        this.dragon.animations.add('fly', [0, 1, 2, 3], 12, true);
-        this.dragon.animations.play('fly');
+        //this.dragon = game.add.sprite(game.world.centerX, game.world.centerY, "dragon");
+        //this.dragon.anchor.set(0.5, 0.5);
+        //this.dragon.animations.add('fly', [0, 1, 2, 3], 12, true);
+        //this.dragon.animations.play('fly');
         game.stage.backgroundColor = "#45B5AA";
 
         this.titleText = game.add.text(game.world.centerX, 60, "Credits", {

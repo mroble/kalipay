@@ -28,8 +28,8 @@ var StateInstructions = {
         this.balloonGroup.add(this.think);
         this.balloonGroup.scale.x = .5;
         this.balloonGroup.scale.y = .5;
-        this.balloonGroup.x = this.dragon.x-20;
-        this.balloonGroup.y=this.dragon.y-100;
+        this.balloonGroup.x = this.gamay.x-20;
+        this.balloonGroup.y=this.gamay.y-100;
 
     }
     , startGame: function () {

@@ -26,16 +26,15 @@ var StateMain = {
         this.bottom = game.height - 120;
 
         //sounds
-        this.burp = game.add.audio("burp");
-        this.gulp = game.add.audio("gulp");
-        this.backgroundMusic = game.add.audio("backgroundMusic");
-        this.backgroundMusic.volume = .5;
-        this.backgroundMusic.loop = true;
 
-        //dragon
-        this.dragon = game.add.sprite(0, 0, "dragon");
-        this.dragon.animations.add('fly', [0, 1, 2, 3], 12, true);
-        this.dragon.animations.play('fly');
+        //this.backgroundMusic = game.add.audio("backgroundMusic");
+        //this.backgroundMusic.volume = .5;
+        //this.backgroundMusic.loop = true;
+
+        //gamay
+        this.gamay = game.add.sprite(0, 0, "gamay");
+        this.gamay.animations.add('fly', [0, 1, 2, 3], 12, true);
+        this.gamay.animations.play('fly');
 
         //background
         this.background = game.add.tileSprite(0, game.height - 480, game.width, 480, 'background');
@@ -47,8 +46,8 @@ var StateMain = {
             this.bottom = this.background.y+360;
         }
 
-        this.dragon.bringToTop();
-        this.dragon.y = this.top;
+        this.gamay.bringToTop();
+        this.gamay.y = this.top;
 
 
         this.background.autoScroll(-100, 0);
@@ -85,14 +84,14 @@ var StateMain = {
         this.btnSound = game.add.sprite(70, 20, "soundButtons");
         this.btnMusic.frame = 2;
 
-        game.physics.enable([this.dragon, this.candies], Phaser.Physics.ARCADE);
-        this.dragon.body.gravity.y = this.fall;
-        this.dragon.body.immovable = true;
+        game.physics.enable([this.gamay, this.candies], Phaser.Physics.ARCADE);
+        this.gamay.body.gravity.y = this.fall;
+        this.gamay.body.immovable = true;
 
         this.setListeners();
         this.resetThink();
         this.updateButtons();
-        this.updateMusic();
+        //this.updateMusic();
     }
     , setListeners: function () {
         if (screen.width < 1500) {
@@ -113,18 +112,18 @@ var StateMain = {
         musicOn = !musicOn;
         this.updateButtons();
     }
-    , updateMusic: function () {
-        if (musicOn == true) {
-            if (this.musicPlaying == false) {
+    //, updateMusic: function () {
+      //  if (musicOn == true) {
+        //    if (this.musicPlaying == false) {
 
-                this.musicPlaying = true;
-                this.backgroundMusic.play();
-            }
-        } else {
-            this.musicPlaying = false;
-            this.backgroundMusic.stop();
-        }
-    }
+          //      this.musicPlaying = true;
+            //    this.backgroundMusic.play();
+            //}
+        //} else {
+          //  this.musicPlaying = false;
+            //this.backgroundMusic.stop();
+        //}
+    //}
     , updateButtons: function () {
         if (soundOn == true) {
             this.btnSound.frame = 0;
@@ -157,25 +156,25 @@ var StateMain = {
         document.getElementById("wrongWay").style.display = "none";
     }
     , flap: function () {
-        this.dragon.body.velocity.y = -this.lift;
+        this.gamay.body.velocity.y = -this.lift;
     }
-    , onEat: function (dragon, candy) {
+    , onEat: function (gamay, candy) {
         if (this.think.frame == candy.frame) {
             candy.kill();
             this.resetThink();
             score++;
             this.scoreText.text = score;
-            if (soundOn == true) {
-                this.gulp.play();
-            }
-        } else {
-            if (soundOn == true) {
-                this.burp.play();
-            }
-            candy.kill();
-            this.backgroundMusic.stop();
-            game.state.start("StateOver");
-        }
+           // if (soundOn == true) {
+             //   this.gulp.play();
+            //}
+        } //else {
+            //if (soundOn == true) {
+              //  this.burp.play();
+            //}
+            //candy.kill();
+            //this.backgroundMusic.stop();
+            //game.state.start("StateOver");
+        //}
     }
     , resetThink: function () {
         var thinking = game.rnd.integerInRange(0, 7);
@@ -183,22 +182,22 @@ var StateMain = {
 
     }
     , update: function () {
-        game.physics.arcade.collide(this.dragon, this.candies, null, this.onEat, this);
+        game.physics.arcade.collide(this.gamay, this.candies, null, this.onEat, this);
 
-        this.balloonGroup.y = this.dragon.y - 60;
+        this.balloonGroup.y = this.gamay.y - 60;
 
         if (game.input.activePointer.isDown) {
             this.flap();
         }
-        if (this.dragon.y < this.top) {
-            this.dragon.y = this.top;
-            this.dragon.body.velocity.y = 0;
+        if (this.gamay.y < this.top) {
+            this.gamay.y = this.top;
+            this.gamay.body.velocity.y = 0;
         }
-        if (this.dragon.y > this.bottom) {
-            this.dragon.y = this.bottom;
-            this.dragon.body.gravity.y = 0;
+        if (this.gamay.y > this.bottom) {
+            this.gamay.y = this.bottom;
+            this.gamay.body.gravity.y = 0;
         } else {
-            this.dragon.body.gravity.y = 500;
+            this.gamay.body.gravity.y = 500;
 
         }
     }
