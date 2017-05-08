@@ -12,7 +12,7 @@ var StateMain = {
 
         //init vars
         score = 0;
-        this.musicPlaying = true;
+        this.musicPlaying = false;
         this.lift=350;
         this.fall=500;
         this.delay=1;
@@ -91,7 +91,7 @@ var StateMain = {
         this.setListeners();
         this.resetThink();
         this.updateButtons();
-        //this.updateMusic();
+        this.updateMusic();
     }
     , setListeners: function () {
         if (screen.width < 1500) {
