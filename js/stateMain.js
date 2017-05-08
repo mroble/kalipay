@@ -12,7 +12,7 @@ var StateMain = {
 
         //init vars
         score = 0;
-        this.musicPlaying = false;
+        this.musicPlaying = true;
         this.lift=350;
         this.fall=500;
         this.delay=1;
@@ -27,9 +27,9 @@ var StateMain = {
 
         //sounds
 
-        //this.backgroundMusic = game.add.audio("backgroundMusic");
-        //this.backgroundMusic.volume = .5;
-        //this.backgroundMusic.loop = true;
+        this.backgroundMusic = game.add.audio("backgroundMusic");
+        this.backgroundMusic.volume = .5;
+        this.backgroundMusic.loop = true;
 
         //gamay
         this.gamay = game.add.sprite(0, 0, "gamay");
@@ -112,18 +112,18 @@ var StateMain = {
         musicOn = !musicOn;
         this.updateButtons();
     }
-    //, updateMusic: function () {
-      //  if (musicOn == true) {
-        //    if (this.musicPlaying == false) {
+    , updateMusic: function () {
+        if (musicOn == true) {
+            if (this.musicPlaying == false) {
 
-          //      this.musicPlaying = true;
-            //    this.backgroundMusic.play();
-            //}
-        //} else {
-          //  this.musicPlaying = false;
-            //this.backgroundMusic.stop();
-        //}
-    //}
+                this.musicPlaying = true;
+               this.backgroundMusic.play();
+            }
+        } else {
+            this.musicPlaying = false;
+            this.backgroundMusic.stop();
+        }
+    }
     , updateButtons: function () {
         if (soundOn == true) {
             this.btnSound.frame = 0;
