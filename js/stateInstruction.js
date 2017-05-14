@@ -15,8 +15,7 @@ var StateInstructions = {
         this.gamay.animations.play('fly');
         game.stage.backgroundColor = "#45B5AA";
 
-        this.inText = game.add.text(game.world.centerX,30,"Grab only what Gamay is thinking!");
-        //font: "50px Architects Daughter"
+        this.inText = game.add.text(game.world.centerX,30,"Help Gamay eat as many vegetables as possible!");
         this.inText.fill="#000000";
         this.inText.anchor.set(0.5, 0.5);
 

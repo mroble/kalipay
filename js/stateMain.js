@@ -54,7 +54,7 @@ var StateMain = {
 
         //candies
         this.candies = game.add.group();
-        this.candies.createMultiple(40, 'candy');
+        this.candies.createMultiple(8, 'candy');
         this.candies.setAll('checkWorldBounds', true);
         this.candies.setAll('outOfBoundsKill', true);
 
@@ -161,7 +161,6 @@ var StateMain = {
     , onEat: function (gamay, candy) {
         if (this.think.frame == candy.frame) {
             candy.kill();
-            this.resetThink();
             score++;
             this.scoreText.text = score;
            // if (soundOn == true) {
