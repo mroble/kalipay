@@ -161,6 +161,7 @@ var StateMain = {
     , onEat: function (gamay, candy) {
         if (this.think.frame == candy.frame) {
             candy.kill();
+            this.resetThink();
             score++;
             this.scoreText.text = score;
            // if (soundOn == true) {
@@ -170,14 +171,14 @@ var StateMain = {
             //if (soundOn == true) {
               //  this.burp.play();
             //}
-            //candy.kill();
+            candy.kill();
             //this.backgroundMusic.stop();
             //game.state.start("StateOver");
         //}
     }
     , resetThink: function () {
         var thinking = game.rnd.integerInRange(0, 7);
-        this.think.frame = thinking;
+       this.think.frame = thinking;
 
     }
     , update: function () {

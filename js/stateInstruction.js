@@ -13,9 +13,9 @@ var StateInstructions = {
         this.gamay.anchor.set(0.5, 0.5);
         this.gamay.animations.add('fly', [0, 1, 2, 3], 12, true);
         this.gamay.animations.play('fly');
-        game.stage.backgroundColor = "#45B5AA";
+        game.stage.backgroundColor = "#F0E68C";
 
-        this.inText = game.add.text(game.world.centerX,30,"Help Gamay eat as many vegetables as possible!");
+        this.inText = game.add.text(game.world.centerX,30,"Help Gamay eat the fruits and veggies she's thinking of!");
         this.inText.fill="#000000";
         this.inText.anchor.set(0.5, 0.5);
 
