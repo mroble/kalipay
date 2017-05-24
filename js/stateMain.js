@@ -28,11 +28,23 @@ var StateMain = {
         //sounds
 
         this.backgroundMusic = game.add.audio("backgroundMusic");
-        this.backgroundMusic.volume = .5;
+        this.backgroundMusic.volume = .3;
         this.backgroundMusic.loop = true;
 
         this.mangga = game.add.audio("mangga");
         this.mangga.volume = .5;
+        this.backgroundMusic.loop = false;
+
+        this.kamatis = game.add.audio("kamatis");
+        this.kamatis.volume = .5;
+        this.backgroundMusic.loop = false;
+
+        this.balanghoy = game.add.audio("balanghoy");
+        this.balanghoy.volume = .5;
+        this.backgroundMusic.loop = false;
+
+        this.kalabasa = game.add.audio("kalabasa");
+        this.kalabasa.volume = .5;
         this.backgroundMusic.loop = false;
 
         this.yummy = game.add.audio("yummy");
@@ -176,21 +188,26 @@ var StateMain = {
     }
     , onEat: function (gamay, candy) {
         if (this.think.frame == candy.frame) {
-            //this.backgroundMusic.stop();
-            //this.mangga.play();
-            //this.yummy.play();
             candy.kill();
             this.resetThink();
             score++;
             this.scoreText.text = score;
-            //this.backgroundMusic.play();
-           // if (soundOn == true) {
-             //   this.gulp.play();
-            //}
+            if (soundOn == true && candy.frame == 0){
+                this.mangga.play();
+            }
+            if (soundOn == true && candy.frame == 1){
+                this.kamatis.play();
+            }
+            if (soundOn == true && candy.frame == 2){
+                this.balanghoy.play();
+            }
+            if (soundOn == true && candy.frame == 3){
+                this.kalabasa.play();
+            }
         } else {
-            //if (soundOn == true) {
-              //  this.burp.play();
-            //}
+            if (soundOn == true) {
+              this.yummy.play();
+            }
             candy.kill();
             //this.backgroundMusic.stop();
             //game.state.start("StateOver");
