@@ -35,6 +35,10 @@ var StateMain = {
         this.mangga.volume = .5;
         this.backgroundMusic.loop = false;
 
+        this.yummy = game.add.audio("yummy");
+        this.yummy.volume = .5;
+        this.yummy.loop = false;
+
 
         //gamay
         this.gamay = game.add.sprite(0, 0, "gamay");
@@ -171,25 +175,26 @@ var StateMain = {
         this.gamay.body.velocity.y = -this.lift;
     }
     , onEat: function (gamay, candy) {
-        if (this.think.frame == candy.frame && candy.frame == 1) {
-            this.backgroundMusic.stop();
-            this.mangga.play();
+        if (this.think.frame == candy.frame) {
+            //this.backgroundMusic.stop();
+            //this.mangga.play();
+            //this.yummy.play();
             candy.kill();
             this.resetThink();
             score++;
             this.scoreText.text = score;
-            this.backgroundMusic.play();
+            //this.backgroundMusic.play();
            // if (soundOn == true) {
              //   this.gulp.play();
             //}
-        } //else {
+        } else {
             //if (soundOn == true) {
               //  this.burp.play();
             //}
             candy.kill();
             //this.backgroundMusic.stop();
             //game.state.start("StateOver");
-        //}
+        }
     }
 
 
