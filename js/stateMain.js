@@ -31,6 +31,11 @@ var StateMain = {
         this.backgroundMusic.volume = .5;
         this.backgroundMusic.loop = true;
 
+        this.mangga = game.add.audio("mangga");
+        this.mangga.volume = .5;
+        this.backgroundMusic.loop = false;
+
+
         //gamay
         this.gamay = game.add.sprite(0, 0, "gamay");
         this.gamay.animations.add('fly', [0, 1, 2, 3], 12, true);
@@ -145,11 +150,11 @@ var StateMain = {
     }
     , fireCandy: function () {
         var candy = this.candies.getFirstDead();
-        var yy = game.rnd.integerInRange(this.top, this.bottom);
+       var yy = game.rnd.integerInRange(this.top, this.bottom);
         var xx = game.width - 100;
         var type = game.rnd.integerInRange(0, 7);
 
-        candy.frame = type;
+       candy.frame = type;
         candy.reset(xx, yy);
         candy.enabled = true;
         candy.body.velocity.x = -200;
@@ -166,11 +171,14 @@ var StateMain = {
         this.gamay.body.velocity.y = -this.lift;
     }
     , onEat: function (gamay, candy) {
-        if (this.think.frame == candy.frame) {
+        if (this.think.frame == candy.frame && candy.frame == 1) {
+            this.backgroundMusic.stop();
+            this.mangga.play();
             candy.kill();
             this.resetThink();
             score++;
             this.scoreText.text = score;
+            this.backgroundMusic.play();
            // if (soundOn == true) {
              //   this.gulp.play();
             //}
@@ -183,8 +191,10 @@ var StateMain = {
             //game.state.start("StateOver");
         //}
     }
+
+
     , resetThink: function () {
-        var thinking = game.rnd.integerInRange(0, 7);
+        var thinking = game.rnd.integerInRange(0, 8);
        this.think.frame = thinking;
 
     }
