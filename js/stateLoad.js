@@ -24,12 +24,12 @@ var StateLoad = {
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
         //change this song
         game.load.audio("backgroundMusic", "sounds/song18.mp3");
-        game.load.audio("balanghoy", "sounds/food/balanghoy.m4a");
-        game.load.audio("mangga", "sounds/food/mangga.m4a");
-        game.load.audio("kamatis", "sounds/food/kamatis.m4a");
-        game.load.audio("kalabasa", "sounds/food/kalabasa.m4a");
-        game.load.audio("yummy", "sounds/food/yummy.m4a");
-        game.load.audio("instructions", "sounds/gamay_instructions.m4a");
+        game.load.audio("balanghoy", "sounds/food/balanghoy.wav");
+        game.load.audio("mangga", "sounds/food/mangga.wav");
+        game.load.audio("kamatis", "sounds/food/kamatis.wav");
+        game.load.audio("kalabasa", "sounds/food/kalabasa.wav");
+        game.load.audio("yummy", "sounds/food/yummy.wav");
+        game.load.audio("instructions", "sounds/gamay_instructions.wav");
         game.load.spritesheet("buttons", "images/ui/buttons.png", 265, 75);
 
     },

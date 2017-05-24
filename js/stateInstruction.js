@@ -5,6 +5,7 @@ var StateInstructions = {
     },
 
     create: function () {
+
         this.buttonStart = game.add.button(game.world.centerX, game.world.centerY + 100, "buttons", this.startGame, this, 6, 7, 6);
         this.buttonStart.anchor.set(0.5, 0.5);
 
@@ -18,6 +19,14 @@ var StateInstructions = {
         this.inText = game.add.text(game.world.centerX,30,"Help Gamay eat the fruits and veggies she's thinking of!");
         this.inText.fill="#000000";
         this.inText.anchor.set(0.5, 0.5);
+
+        //audio
+        //this.burp = game.add.audio("burp");
+        this.instructions = game.add.audio("instructions");
+        this.instructions.play();
+        this.instructions.volume = .75;
+        this.instructions.loop = false;
+
 
         //thought
         this.balloonGroup = game.add.group();
