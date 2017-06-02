@@ -19,6 +19,9 @@ var StateLoad = {
         game.load.image("background", "images/main/background.png");
         game.load.image("title", "images/main/title_pic.png");
         game.load.image("kamatisToast", "images/main/kamatis.png");
+        game.load.image("manggaToast", "images/main/mangga.png");
+        game.load.image("balanghoyToast", "images/main/balanghoy.png");
+        game.load.image("kalabasaToast", "images/main/kalabasa.png");
         game.load.spritesheet("candy", "images/main/candy.png", 52, 50, 4);
         game.load.image("balloon", "images/main/thought.png");
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
