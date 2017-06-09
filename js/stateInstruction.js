@@ -31,7 +31,7 @@ var StateInstructions = {
         //thought
         this.balloonGroup = game.add.group();
         this.balloon = game.add.sprite(0, 0, "balloon");
-        this.think = game.add.sprite(36, 26, "candy");
+        this.think = game.add.sprite(36, 26, "veggies");
         this.balloonGroup.add(this.balloon);
         this.balloonGroup.add(this.think);
         this.balloonGroup.scale.x = .5;

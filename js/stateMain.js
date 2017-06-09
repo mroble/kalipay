@@ -73,16 +73,16 @@ var StateMain = {
 
         this.background.autoScroll(-100, 0);
 
-        //candies
-        this.candies = game.add.group();
-        this.candies.createMultiple(8, 'candy');
-        this.candies.setAll('checkWorldBounds', true);
-        this.candies.setAll('outOfBoundsKill', true);
+        //veggies
+        this.veggies = game.add.group();
+        this.veggies.createMultiple(8, 'veggie');
+        this.veggies.setAll('checkWorldBounds', true);
+        this.veggies.setAll('outOfBoundsKill', true);
 
         //thought
         this.balloonGroup = game.add.group();
         this.balloon = game.add.sprite(0, 0, "balloon");
-        this.think = game.add.sprite(36, 26, "candy");
+        this.think = game.add.sprite(36, 26, "veggie");
         this.balloonGroup.add(this.balloon);
         this.balloonGroup.add(this.think);
         this.balloonGroup.scale.x = .5;
@@ -108,7 +108,7 @@ var StateMain = {
 
 
 
-        game.physics.enable([this.gamay, this.candies], Phaser.Physics.ARCADE);
+        game.physics.enable([this.gamay, this.veggies], Phaser.Physics.ARCADE);
         this.gamay.body.gravity.y = this.fall;
         this.gamay.body.immovable = true;
 
@@ -122,7 +122,7 @@ var StateMain = {
             game.scale.enterIncorrectOrientation.add(this.wrongWay, this);
             game.scale.leaveIncorrectOrientation.add(this.rightWay, this);
         }
-        game.time.events.loop(Phaser.Timer.SECOND*this.delay, this.fireCandy, this);
+        game.time.events.loop(Phaser.Timer.SECOND*this.delay, this.fireVeggie, this);
         this.btnSound.inputEnabled = true;
         this.btnSound.events.onInputDown.add(this.toggleSound, this);
         this.btnMusic.inputEnabled = true;
@@ -160,16 +160,16 @@ var StateMain = {
             this.btnMusic.frame = 3;
         }
     }
-    , fireCandy: function () {
-        var candy = this.candies.getFirstDead();
+    , fireVeggie: function () {
+        var veggie = this.veggies.getFirstDead();
        var yy = game.rnd.integerInRange(this.top, this.bottom);
         var xx = game.width - 100;
         var type = game.rnd.integerInRange(0, 7);
 
-       candy.frame = type;
-        candy.reset(xx, yy);
-        candy.enabled = true;
-        candy.body.velocity.x = -200;
+       veggie.frame = type;
+        veggie.reset(xx, yy);
+        veggie.enabled = true;
+        veggie.body.velocity.x = -200;
     }
     , wrongWay: function () {
 
@@ -182,13 +182,13 @@ var StateMain = {
     , flap: function () {
         this.gamay.body.velocity.y = -this.lift;
     }
-    , onEat: function (gamay, candy) {
-        if (this.think.frame == candy.frame) {
-            candy.kill();
+    , onEat: function (gamay, veggie) {
+        if (this.think.frame == veggie.frame) {
+            veggie.kill();
             this.resetThink();
             score++;
             this.scoreText.text = score;
-            if (soundOn == true && candy.frame == 0){
+            if (soundOn == true && veggie.frame == 0){
                 this.mangga.play();
                 this.manggaToast=game.add.sprite(game.world.centerX + 20,game.world.centerY - 100,"manggaToast");
                 this.manggaToast.anchor.set(0.5,0.5);
@@ -197,7 +197,7 @@ var StateMain = {
                  game.add.tween(this.manggaToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
 
             }
-            if (soundOn == true && candy.frame == 1){
+            if (soundOn == true && veggie.frame == 1){
                 this.kamatis.play();
                 this.kamatisToast=game.add.sprite(game.world.centerX,game.world.centerY,"kamatisToast");
                 this.kamatisToast.anchor.set(0.5,0.5);
@@ -208,7 +208,7 @@ var StateMain = {
 
             }
 
-            if (soundOn == true && candy.frame == 2){
+            if (soundOn == true && veggie.frame == 2){
                 this.balanghoy.play();
                 this.balanghoyToast=game.add.sprite(game.world.centerX- 20 ,game.world.centerY + 100,"balanghoyToast");
                 this.balanghoyToast.anchor.set(0.5,0.5);
@@ -217,7 +217,7 @@ var StateMain = {
                 game.add.tween(this.balanghoyToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
 
             }
-            if (soundOn == true && candy.frame == 3){
+            if (soundOn == true && veggie.frame == 3){
                 this.kalabasa.play();
                 this.kalabasaToast=game.add.sprite(game.world.centerX - 40,game.world.centerY - 45,"kalabasaToast");
                 this.kalabasaToast.anchor.set(0.5,0.5);
@@ -230,7 +230,7 @@ var StateMain = {
             if (soundOn == true) {
               this.yummy.play();
             }
-            candy.kill();
+            veggie.kill();
             //this.backgroundMusic.stop();
             //game.state.start("StateOver");
         }
@@ -243,7 +243,7 @@ var StateMain = {
 
     }
     , update: function () {
-        game.physics.arcade.collide(this.gamay, this.candies, null, this.onEat, this);
+        game.physics.arcade.collide(this.gamay, this.veggies, null, this.onEat, this);
 
         this.balloonGroup.y = this.gamay.y - 60;
 
