@@ -31,7 +31,7 @@ window.onload = function () {
     //add a state or screen to the game
     game.state.add("StateMain", StateMain);
     game.state.add("StateTitle", StateTitle);
-    game.state.add("StateOver", StateOver);
+    //game.state.add("StateOver", StateOver);
     game.state.add("StateVictory", StateVictory);
     game.state.add("StateInit", StateInit);
     game.state.add("StateLoad", StateLoad);

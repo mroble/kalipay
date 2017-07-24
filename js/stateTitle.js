@@ -16,16 +16,7 @@ var StateTitle = {
     , startGame: function () {
         game.state.start("StateInstructions");
     }
-    , update: function () {
 
-    },
-
-
-
-
-    startGame: function () {
-        game.state.start("StateInstructions");
-    }
     , update: function () {
 
     }
