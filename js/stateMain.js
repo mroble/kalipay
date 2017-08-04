@@ -101,10 +101,15 @@ var StateMain = {
         this.scoreLabel.anchor.set(0.5, 0.5);
 
         //sound buttons
-        this.btnMusic = game.add.sprite(20, 20, "soundButtons");
-        this.btnSound = game.add.sprite(70, 20, "soundButtons");
-        this.btnMusic.frame = 2;
+       this.btnMusic = gameButtons.addAudioButton("music", 20, 20, gameButtons.toggleMusic, this);
+       this.btnSound = gameButtons.addAudioButton("sound", 20, 70, gameButtons.toggleSound, this);
 
+        //this.btnMusic.frame = 2;
+        this.audioGroup = game.add.group();
+        this.audioGroup.add(this.btnMusic);
+        this.audioGroup.add(this.btnSound);
+        this.audioGroup.fixedToCamera = true;
+        this.audioGroup.cameraOffset.setTo(0, 0);
 
 
 
