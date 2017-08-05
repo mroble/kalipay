@@ -132,6 +132,7 @@ var StateMain = {
     , toggleMusic: function () {
         musicOn = !musicOn;
         this.updateButtons();
+        this.updateMusic();
     }
     , updateMusic: function () {
         if (musicOn == true) {
