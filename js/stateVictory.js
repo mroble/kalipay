@@ -27,7 +27,7 @@ var StateVictory = {
        // this.instructions.play();
         //this.instructions.volume = .75;
         //this.instructions.loop = false;
-
+    }
 
     , startGame: function () {
         game.state.start("StateMain");
@@ -37,8 +37,8 @@ var StateVictory = {
 
     }
        // this.titleText.anchor.set(0.5, 0.5);
-    //}
 
+}
 
 
 
