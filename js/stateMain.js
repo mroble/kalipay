@@ -186,6 +186,10 @@ var StateMain = {
             this.resetThink();
             score++;
             this.scoreText.text = score;
+            if(score === 3) {
+                this.backgroundMusic.stop();
+                game.state.start("StateVictory");
+            }
             if (soundOn == true && veggie.frame == 0){
                 this.mangga.play();
                 this.manggaToast=game.add.sprite(game.world.centerX + 20,game.world.centerY - 100,"manggaToast");
@@ -193,6 +197,13 @@ var StateMain = {
                 //this.manggaToast.alpha = 0;
                 game.add.tween(this.manggaToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
                  game.add.tween(this.manggaToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
+            } else if (soundOn == false && veggie.frame == 0 ) {
+                this.manggaToast=game.add.sprite(game.world.centerX + 20,game.world.centerY - 100,"manggaToast");
+                this.manggaToast.anchor.set(0.5,0.5);
+                //this.manggaToast.alpha = 0;
+                game.add.tween(this.manggaToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
+                game.add.tween(this.manggaToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
+
 
             }
             if (soundOn == true && veggie.frame == 1){
@@ -201,6 +212,13 @@ var StateMain = {
                 this.kamatisToast.anchor.set(0.5,0.5);
                 //this.kamatisToast.alpha = 0;
                 //game.add.tween(this.kamatisToast).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true, 0, 1000, true);
+                game.add.tween(this.kamatisToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
+                game.add.tween(this.kamatisToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
+
+            } else if (soundOn == false && veggie.frame == 1 ) {
+                this.kamatisToast=game.add.sprite(game.world.centerX,game.world.centerY,"kamatisToast");
+                this.kamatisToast.anchor.set(0.5,0.5);
+                //this.manggaToast.alpha = 0;
                 game.add.tween(this.kamatisToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
                 game.add.tween(this.kamatisToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
 
@@ -214,12 +232,26 @@ var StateMain = {
                 game.add.tween(this.balanghoyToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
                 game.add.tween(this.balanghoyToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
 
+            } else if (soundOn == false && veggie.frame == 2 ) {
+                this.balanghoyToast=game.add.sprite(game.world.centerX - 20,game.world.centerY + 100,"balanghoyToast");
+                this.balanghoyToast.anchor.set(0.5,0.5);
+                //this.manggaToast.alpha = 0;
+                game.add.tween(this.balanghoyToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
+                game.add.tween(this.balanghoyToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
+
             }
             if (soundOn == true && veggie.frame == 3){
                 this.kalabasa.play();
                 this.kalabasaToast=game.add.sprite(game.world.centerX - 40,game.world.centerY - 45,"kalabasaToast");
                 this.kalabasaToast.anchor.set(0.5,0.5);
                 //this.kalabasaToast.alpha = 0;
+                game.add.tween(this.kalabasaToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
+                game.add.tween(this.kalabasaToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
+
+            } else if (soundOn == false && veggie.frame == 3 ) {
+                this.kalabasaToast=game.add.sprite(game.world.centerX - 40,game.world.centerY - 45,"kalabasaToast");
+                this.kalabasaToast.anchor.set(0.5,0.5);
+                //this.manggaToast.alpha = 0;
                 game.add.tween(this.kalabasaToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
                 game.add.tween(this.kalabasaToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
 
@@ -233,7 +265,6 @@ var StateMain = {
             //game.state.start("StateOver");
         }
     }
-
 
     , resetThink: function () {
         var thinking = game.rnd.integerInRange(0, 8);

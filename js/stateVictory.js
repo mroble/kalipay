@@ -5,6 +5,7 @@ var StateVictory = {
     },
 
     create: function () {
+        //make nicer buttons for this play again
         this.buttonStart = game.add.button(game.world.centerX, game.world.centerY + 100, "buttons", this.startGame, this, 6, 7, 6);
         this.buttonStart.anchor.set(0.5, 0.5);
 
@@ -15,31 +16,29 @@ var StateVictory = {
         this.gamay.animations.play('fly');
         game.stage.backgroundColor = "#26C9FF";
 
-        this.titleText = game.add.text(game.world.centerX, 60, "Hungry Dragon", {
-            font: "50px Lobster"
-            , fill: "#00D900"
-            , stroke: "#222222"
-            , strokeThickness: 4
-            , align: "center"
-        });
-        this.titleText.anchor.set(0.5, 0.5);
-    }
+        this.inText = game.add.text(game.world.centerX,30,"You did it!");
+        this.inText.fill="#000000";
+        this.inText.anchor.set(0.5, 0.5);
+
+         //audio
+         //record a happy message later
+        //this.burp = game.add.audio("burp");
+        //this.instructions = game.add.audio("instructions");
+       // this.instructions.play();
+        //this.instructions.volume = .75;
+        //this.instructions.loop = false;
+
+
     , startGame: function () {
-        game.state.start("StateInstructions");
+        game.state.start("StateMain");
     }
+
     , update: function () {
 
-    },
+    }
        // this.titleText.anchor.set(0.5, 0.5);
     //}
 
 
 
-    startGame: function () {
-        game.state.start("StateInstructions");
-    }
-    , update: function () {
 
-    }
-
-}
