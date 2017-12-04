@@ -32,9 +32,9 @@ window.onload = function () {
     game.state.add("StateMain", StateMain);
     game.state.add("StateTitle", StateTitle);
     //game.state.add("StateOver", StateOver);
-    game.state.add("StateVictory", StateVictory);
     game.state.add("StateInit", StateInit);
     game.state.add("StateLoad", StateLoad);
     game.state.add("StateInstructions", StateInstructions);
+    game.state.add("StateVictory", StateVictory);
     game.state.start("StateInit");
 }
