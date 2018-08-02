@@ -47,9 +47,9 @@ var StateMain = {
         this.kalabasa.volume = .5;
         this.backgroundMusic.loop = false;
 
-        this.yummy = game.add.audio("yummy");
-        this.yummy.volume = .5;
-        this.yummy.loop = false;
+        //this.yummy = game.add.audio("yummy");
+        //this.yummy.volume = .5;
+        //this.yummy.loop = false;
 
 
         //gamay
@@ -180,6 +180,7 @@ var StateMain = {
     , flap: function () {
         this.gamay.body.velocity.y = -this.lift;
     }
+
     , onEat: function (gamay, veggie) {
         if (this.think.frame == veggie.frame) {
             veggie.kill();
