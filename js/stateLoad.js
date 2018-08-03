@@ -17,7 +17,7 @@ var StateLoad = {
         //PRELOAD EVERYTHING HERE
         game.load.spritesheet("gamay", "images/main/Gamay_Sprite.png", 120, 85, 4);
         game.load.image("background", "images/main/background.png");
-        game.load.image("title", "images/main/title_pic.png");
+        game.load.image("title", "images/ui/KalipayGameTitle.png");
         game.load.image("kamatisToast", "images/main/kamatis.png");
         game.load.image("manggaToast", "images/main/mangga.png");
         game.load.image("balanghoyToast", "images/main/balanghoy.png");
@@ -25,6 +25,7 @@ var StateLoad = {
         game.load.spritesheet("veggie", "images/main/veggie.png", 52, 50, 4);
         game.load.image("balloon", "images/main/thought.png");
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
+
         //change this song
         game.load.audio("backgroundMusic", "sounds/song18.mp3");
         game.load.audio("balanghoy", "sounds/food/balanghoy.wav");
