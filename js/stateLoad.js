@@ -17,7 +17,7 @@ var StateLoad = {
         //PRELOAD EVERYTHING HERE
         game.load.spritesheet("gamay", "images/main/Gamay_Sprite.png", 120, 85, 4);
         game.load.image("background", "images/main/background.png");
-        game.load.image("title", "images/ui/KalipayGameTitle.png");
+        game.load.image("title", "images/ui/Kalipay_GameTitle.png");
         game.load.image("kamatisToast", "images/main/kamatis.png");
         game.load.image("manggaToast", "images/main/mangga.png");
         game.load.image("balanghoyToast", "images/main/balanghoy.png");
