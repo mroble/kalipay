@@ -259,11 +259,11 @@ var StateMain = {
             }
         } else {
             if (soundOn == true) {
-              //this.yummy.play();
+              this.yummy.play();
             }
             veggie.kill();
-            //this.backgroundMusic.stop();
-            //game.state.start("StateOver");
+            this.backgroundMusic.stop();
+            game.state.start("StateOver");
         }
     }
 
