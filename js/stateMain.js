@@ -192,7 +192,7 @@ var StateMain = {
                 game.state.start("StateVictory");
             }
             if (soundOn == true && veggie.frame == 0){
-                this.mangga.play();
+                //this.mangga.play();
                 this.manggaToast=game.add.sprite(game.world.centerX + 20,game.world.centerY - 100,"manggaToast");
                 this.manggaToast.anchor.set(0.5,0.5);
                 //this.manggaToast.alpha = 0;
@@ -208,7 +208,7 @@ var StateMain = {
 
             }
             if (soundOn == true && veggie.frame == 1){
-                this.kamatis.play();
+                //this.kamatis.play();
                 this.kamatisToast=game.add.sprite(game.world.centerX,game.world.centerY,"kamatisToast");
                 this.kamatisToast.anchor.set(0.5,0.5);
                 //this.kamatisToast.alpha = 0;
@@ -226,7 +226,7 @@ var StateMain = {
             }
 
             if (soundOn == true && veggie.frame == 2){
-                this.balanghoy.play();
+               // this.balanghoy.play();
                 this.balanghoyToast=game.add.sprite(game.world.centerX- 20 ,game.world.centerY + 100,"balanghoyToast");
                 this.balanghoyToast.anchor.set(0.5,0.5);
                 //this.balanghoyToast.alpha = 0;
@@ -242,7 +242,7 @@ var StateMain = {
 
             }
             if (soundOn == true && veggie.frame == 3){
-                this.kalabasa.play();
+                //this.kalabasa.play();
                 this.kalabasaToast=game.add.sprite(game.world.centerX - 40,game.world.centerY - 45,"kalabasaToast");
                 this.kalabasaToast.anchor.set(0.5,0.5);
                 //this.kalabasaToast.alpha = 0;
@@ -258,12 +258,12 @@ var StateMain = {
 
             }
         } else {
-            if (soundOn == true) {
-              this.yummy.play();
-            }
+            //if (soundOn == true) {
+              //this.yummy.play();
+            //}
             veggie.kill();
-            this.backgroundMusic.stop();
-            game.state.start("StateOver");
+            //this.backgroundMusic.stop();
+            //game.state.start("StateOver");
         }
     }
 
