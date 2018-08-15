@@ -1,4 +1,4 @@
-var StateVictory = {
+ var StateVictory = {
 
     preload: function () {
         game.load.image("DidIt", "images/ui/kalDidIt.png");
