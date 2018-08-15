@@ -17,8 +17,8 @@ var StateCredits = {
 
         this.titleText = game.add.text(game.world.centerX, 60, "Credits", {
             //Music And Sounds Courtesy Of
-            //
-            //
+            //Applause- freesounds.org
+            //Rural sounds zapsplat.com
             //
             font: "50px Lobster"
             , fill: "#ffcc00"
