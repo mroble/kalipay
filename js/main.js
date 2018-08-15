@@ -10,10 +10,10 @@ window.onload = function () {
     if (screen.width > 1500) {
         //desktop laptop
         if (useLandscape == true) {
-            game = new Phaser.Game(640, 480, Phaser.AUTO, "ph_game");
+            game = new Phaser.Game(800, 600, Phaser.AUTO, "ph_game");
         } else {
 
-            game = new Phaser.Game(480, 640, Phaser.AUTO, "ph_game");
+            game = new Phaser.Game(600, 800, Phaser.AUTO, "ph_game");
         }
 
     } else {
