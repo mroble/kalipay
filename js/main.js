@@ -34,7 +34,7 @@ window.onload = function () {
     //game.state.add("StateOver", StateOver);
     game.state.add("StateInit", StateInit);
     game.state.add("StateLoad", StateLoad);
-    game.state.add("StateInstructions", StateInstructions);
+    //game.state.add("StateInstructions", StateInstructions);
     game.state.add("StateVictory", StateVictory);
     game.state.start("StateInit");
 }
