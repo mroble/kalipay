@@ -31,21 +31,21 @@ var StateMain = {
         this.backgroundMusic.volume = .3;
         this.backgroundMusic.loop = true;
 
-        this.mangga = game.add.audio("mangga");
-        this.mangga.volume = .5;
-        this.backgroundMusic.loop = false;
+        //this.mangga = game.add.audio("mangga");
+        //this.mangga.volume = .5;
+        //this.backgroundMusic.loop = false;
 
-        this.kamatis = game.add.audio("kamatis");
-        this.kamatis.volume = .5;
-        this.backgroundMusic.loop = false;
+        //this.kamatis = game.add.audio("kamatis");
+        //this.kamatis.volume = .5;
+        //this.backgroundMusic.loop = false;
 
-        this.balanghoy = game.add.audio("balanghoy");
-        this.balanghoy.volume = .5;
-        this.backgroundMusic.loop = false;
+        //this.balanghoy = game.add.audio("balanghoy");
+        //this.balanghoy.volume = .5;
+        //this.backgroundMusic.loop = false;
 
-        this.kalabasa = game.add.audio("kalabasa");
-        this.kalabasa.volume = .5;
-        this.backgroundMusic.loop = false;
+        //this.kalabasa = game.add.audio("kalabasa");
+        //this.kalabasa.volume = .5;
+        //this.backgroundMusic.loop = false;
 
         //this.yummy = game.add.audio("yummy");
         //this.yummy.volume = .5;
@@ -227,18 +227,18 @@ var StateMain = {
 
             if (soundOn == true && veggie.frame == 2){
                // this.balanghoy.play();
-                this.balanghoyToast=game.add.sprite(game.world.centerX- 20 ,game.world.centerY + 100,"balanghoyToast");
-                this.balanghoyToast.anchor.set(0.5,0.5);
+                this.petsayToast=game.add.sprite(game.world.centerX- 20 ,game.world.centerY + 100, "petsayToast");
+                this.petsayToast.anchor.set(0.5,0.5);
                 //this.balanghoyToast.alpha = 0;
-                game.add.tween(this.balanghoyToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
-                game.add.tween(this.balanghoyToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
+                game.add.tween(this.petsayToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
+                game.add.tween(this.petsayToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
 
             } else if (soundOn == false && veggie.frame == 2 ) {
-                this.balanghoyToast=game.add.sprite(game.world.centerX - 20,game.world.centerY + 100,"balanghoyToast");
-                this.balanghoyToast.anchor.set(0.5,0.5);
+                this.petsayToast=game.add.sprite(game.world.centerX - 20,game.world.centerY + 100,"balanghoyToast");
+                this.petsayToast.anchor.set(0.5,0.5);
                 //this.manggaToast.alpha = 0;
-                game.add.tween(this.balanghoyToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
-                game.add.tween(this.balanghoyToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
+                game.add.tween(this.petsayToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
+                game.add.tween(this.petsayToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
 
             }
             if (soundOn == true && veggie.frame == 3){
