@@ -25,6 +25,7 @@ var StateLoad = {
         game.load.spritesheet("veggie", "images/main/veggie.png", 52, 50, 4);
         game.load.image("balloon", "images/main/thought.png");
         game.load.spritesheet("soundButtons", "images/ui/soundButtons.png", 44, 44, 4);
+        game.load.image("DidIt", "images/ui/kalDidIt.png");
 
         //change this song
         game.load.audio("backgroundMusic", "sounds/naturesounds.mp3");
