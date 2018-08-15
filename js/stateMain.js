@@ -234,7 +234,7 @@ var StateMain = {
                 game.add.tween(this.petsayToast).to({alpha:0}, 1500, Phaser.Easing.Linear.None,true);
 
             } else if (soundOn == false && veggie.frame == 2 ) {
-                this.petsayToast=game.add.sprite(game.world.centerX - 20,game.world.centerY + 100,"balanghoyToast");
+                this.petsayToast=game.add.sprite(game.world.centerX - 20,game.world.centerY + 100,"petsayToast");
                 this.petsayToast.anchor.set(0.5,0.5);
                 //this.manggaToast.alpha = 0;
                 game.add.tween(this.petsayToast).to({y:0}),1500, Phaser.Easing.Linear.None,true;
