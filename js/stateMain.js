@@ -192,9 +192,9 @@ var StateMain = {
             this.resetThink();
             score++;
             this.scoreText.text = score;
-            if(score === 10) {
+            if(score === 3) {
                 this.backgroundMusic.stop();
-                game.time.events.add(3000, youWin, this);
+                game.time.events.add(3000, youWin(), this);
             }
             if (soundOn == true && veggie.frame == 0){
                 this.yummy.play();
