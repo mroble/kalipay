@@ -273,10 +273,10 @@ var StateMain = {
         }
     }
 
-       , youWin: function (){
-        game.state.start("StateVictory");
+      // , youWin: function (){
+       // game.state.start("StateVictory");
 
-    }
+    //}
 
     , resetThink: function () {
         var thinking = game.rnd.integerInRange(0, 8);
