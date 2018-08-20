@@ -194,7 +194,7 @@ var StateMain = {
             this.scoreText.text = score;
             if(score === 3) {
                 this.backgroundMusic.stop();
-                this.time.events.add(3000, this.state.start, this, "StateVictory");
+                this.time.events.add(2000, this.state.start, this, "StateVictory");
 
             }
             if (soundOn == true && veggie.frame == 0){
