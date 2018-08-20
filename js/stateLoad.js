@@ -33,8 +33,8 @@ var StateLoad = {
         //game.load.audio("mangga", "sounds/food/mangga.wav");
         //game.load.audio("kamatis", "sounds/food/kamatis.wav");
         //game.load.audio("kalabasa", "sounds/food/kalabasa.wav");
-        //game.load.audio("yummy", "sounds/food/yummy.wav");
-        //game.load.audio("instructions", "sounds/gamay_instructions.wav");
+        game.load.audio("yummy", "sounds/food/yummy.mp3");
+        game.load.audio("winner", "sounds/victory.mp3");
         game.load.spritesheet("buttons", "images/ui/buttons.png", 265, 75);
 
     },
