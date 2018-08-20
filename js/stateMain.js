@@ -187,7 +187,7 @@ var StateMain = {
             this.resetThink();
             score++;
             this.scoreText.text = score;
-            if(score === 5) {
+            if(score === 10) {
                 this.backgroundMusic.stop();
                 game.state.start("StateVictory");
             }
