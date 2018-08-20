@@ -29,10 +29,10 @@
          //audio
          //record a happy message later
         //this.burp = game.add.audio("burp");
-        //this.instructions = game.add.audio("instructions");
-       // this.instructions.play();
-        //this.instructions.volume = .75;
-        //this.instructions.loop = false;
+        this.winner = game.add.audio("winner");
+        this.winner.play();
+        this.winner.volume = .75;
+        this.winner.loop = false;
     }
 
     , startGame: function () {
