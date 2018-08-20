@@ -47,9 +47,9 @@ var StateMain = {
         //this.kalabasa.volume = .5;
         //this.backgroundMusic.loop = false;
 
-        //this.yummy = game.add.audio("yummy");
-        //this.yummy.volume = .5;
-        //this.yummy.loop = false;
+        this.yummy = game.add.audio("yummy");
+        this.yummy.volume = .5;
+        this.yummy.loop = false;
 
 
         //gamay
@@ -187,12 +187,12 @@ var StateMain = {
             this.resetThink();
             score++;
             this.scoreText.text = score;
-            if(score === 3) {
+            if(score === 5) {
                 this.backgroundMusic.stop();
                 game.state.start("StateVictory");
             }
             if (soundOn == true && veggie.frame == 0){
-                //this.mangga.play();
+                this.yummy.play();
                 this.manggaToast=game.add.sprite(game.world.centerX + 20,game.world.centerY - 100,"manggaToast");
                 this.manggaToast.anchor.set(0.5,0.5);
                 //this.manggaToast.alpha = 0;
@@ -208,7 +208,7 @@ var StateMain = {
 
             }
             if (soundOn == true && veggie.frame == 1){
-                //this.kamatis.play();
+                this.yummy.play();
                 this.kamatisToast=game.add.sprite(game.world.centerX,game.world.centerY,"kamatisToast");
                 this.kamatisToast.anchor.set(0.5,0.5);
                 //this.kamatisToast.alpha = 0;
@@ -226,7 +226,7 @@ var StateMain = {
             }
 
             if (soundOn == true && veggie.frame == 2){
-               // this.balanghoy.play();
+               this.yummy.play();
                 this.petsayToast=game.add.sprite(game.world.centerX- 20 ,game.world.centerY + 100, "petsayToast");
                 this.petsayToast.anchor.set(0.5,0.5);
                 //this.balanghoyToast.alpha = 0;
@@ -242,7 +242,7 @@ var StateMain = {
 
             }
             if (soundOn == true && veggie.frame == 3){
-                //this.kalabasa.play();
+                this.yummy.play();
                 this.kalabasaToast=game.add.sprite(game.world.centerX - 40,game.world.centerY - 45,"kalabasaToast");
                 this.kalabasaToast.anchor.set(0.5,0.5);
                 //this.kalabasaToast.alpha = 0;
