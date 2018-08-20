@@ -192,10 +192,9 @@ var StateMain = {
             this.resetThink();
             score++;
             this.scoreText.text = score;
-            if(score === 3) {
+            if(score === 10) {
                 this.backgroundMusic.stop();
-                this.time.events.add(2000, this.state.start, this, "StateVictory");
-
+                game.state.start("StateVictory")
             }
             if (soundOn == true && veggie.frame == 0){
                 this.yummy.play();
