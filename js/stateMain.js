@@ -181,6 +181,14 @@ var StateMain = {
         this.gamay.body.velocity.y = -this.lift;
     }
 
+//function changeState(stateID) {
+  // game.state.start(stateID);
+//}
+
+, youWin: function (StateVictory){
+    game.state.start("StateVictory");
+
+}
     , onEat: function (gamay, veggie) {
         if (this.think.frame == veggie.frame) {
             veggie.kill();
@@ -189,7 +197,7 @@ var StateMain = {
             this.scoreText.text = score;
             if(score === 10) {
                 this.backgroundMusic.stop();
-                game.state.start("StateVictory");
+                game.time.events.add(3000, youWin, this, 'StateVictory');
             }
             if (soundOn == true && veggie.frame == 0){
                 this.yummy.play();
