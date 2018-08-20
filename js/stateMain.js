@@ -185,10 +185,7 @@ var StateMain = {
   // game.state.start(stateID);
 //}
 
-, youWin: function (StateVictory){
-    game.state.start("StateVictory");
 
-}
     , onEat: function (gamay, veggie) {
         if (this.think.frame == veggie.frame) {
             veggie.kill();
@@ -197,7 +194,7 @@ var StateMain = {
             this.scoreText.text = score;
             if(score === 10) {
                 this.backgroundMusic.stop();
-                game.time.events.add(3000, youWin, this, 'StateVictory');
+                game.time.events.add(3000, youWin, this);
             }
             if (soundOn == true && veggie.frame == 0){
                 this.yummy.play();
@@ -273,6 +270,11 @@ var StateMain = {
             //this.backgroundMusic.stop();
             //game.state.start("StateOver");
         }
+    }
+
+       , youWin: function (){
+        game.state.start("StateVictory");
+
     }
 
     , resetThink: function () {
