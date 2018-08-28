@@ -12,7 +12,7 @@
         victory.y = this.world.centerY;
         victory.anchor.set(0.5, 0.5);
 
-        this.buttonStart = game.add.button(game.world.centerX, game.world.centerY + 100, "buttons", this.startGame, this, 6, 7, 6);
+        this.buttonStart = game.add.button(game.world.centerX, game.world.centerY + 100, "buttons", this.startGame, this, 0, 1, 0);
         this.buttonStart.anchor.set(0.5, 0.5);
 
         //gamay
